@@ -1,0 +1,246 @@
+:root {
+  --var-primary: #fb9f3c;
+  --var-background-primary: #ffa23d;
+  --var-background-secondary: #b15523;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Elephant", sans-serif;
+  font-family: "Berlin Sans FB", sans-serif;
+  font-family: "Arial", sans-serif;
+  color: #fff;
+}
+/* NAV */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-sizing: border-box;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+}
+
+/* HEADER */
+header {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)),
+    url(../images/pexels-chan-walrus-958545.jpg);
+  height: 90vh;
+  width: 100%;
+  flex-direction: column;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+header .title {
+  color: var(--var-primary);
+  font-family: "Turkish Times New Roman", sans-serif;
+  font-size: 5.5rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+header .subtitle {
+  color: white;
+  text-align: center;
+  font-family: "Turkish Times New Roman", sans-serif;
+  font-size: 1.5rem;
+}
+
+/* MAIN */
+main {
+  display: flex;
+  flex-direction: column;
+  /* padding: 5rem; */
+}
+
+.container {
+  max-width: 1000px;
+  display: flex;
+}
+
+main .intro {
+  background-color: var(--var-background-primary);
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem;
+  padding: 4rem 5rem 4rem 10rem;
+  box-sizing: border-box;
+}
+
+.intro div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 880px) {
+  .intro {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .intro div {
+    margin: 2rem 0;
+  }
+}
+
+.intro p {
+  text-align: left;
+  font-size: 1.2rem;
+}
+
+.intro div:nth-child(1) {
+  justify-content: center;
+}
+
+.intro:nth-child(1) img {
+  width: 25rem;
+  margin-bottom: 10px;
+}
+
+.intro div:nth-child(2) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro div:nth-child(2) img {
+  width: 25rem;
+}
+
+main .clients {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--var-background-secondary);
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 5rem 4rem 10rem;
+}
+
+.clients h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin: 20px 0;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+.clients-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card .avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  border: 3px solid rgb(176, 151, 151);
+  border-radius: 100%;
+  width: 150px;
+  height: 150px;
+  /* background-position: ; */
+  overflow: hidden;
+  position: relative;
+}
+
+.card .avatar img {
+  width: 200px;
+  /* height: 200px; */
+  aspect-ratio: 1;
+}
+
+.card .text {
+  text-align: center;
+  margin: 20px;
+}
+
+@media (max-width: 880px) {
+  .clients-info {
+    flex-direction: column;
+  }
+}
+
+footer {
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  /* padding: 25px; */
+  padding: 4rem 5rem 4rem 10rem;
+
+  justify-content: space-evenly;
+}
+
+footer div ul {
+  list-style: none;
+}
+
+footer div ul li {
+  font-weight: 600;
+  margin: 5px 0;
+}
+
+footer .form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.form form input {
+  padding: 5px;
+  color: #333;
+  margin-top: 10px;
+}
+
+.form form input[type="email"] {
+  width: 100%;
+}
+
+.form form input[type="submit"] {
+  background-color: tomato;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-weight: bold;
+}
+
+@media (max-width: 880px) {
+  footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
